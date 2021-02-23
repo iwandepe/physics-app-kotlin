@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountVolumeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/input_volume_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/input_values_text"
+            android:textSize="@dimen/font_size_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/length_volume_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_volume_title" />
+
+        <TextView
+            android:id="@+id/length_volume_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/length_text"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/length_volume_input"
+            app:layout_constraintEnd_toStartOf="@+id/length_volume_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/length_volume_input" />
+
+        <TextView
+            android:id="@+id/width_volume_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/width_text"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/width_volume_input"
+            app:layout_constraintEnd_toStartOf="@+id/width_volume_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/width_volume_input" />
+
+        <EditText
+            android:id="@+id/width_volume_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/length_volume_input" />
+
+        <TextView
+            android:id="@+id/height_volume_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/height_text"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/height_volume_input"
+            app:layout_constraintEnd_toStartOf="@+id/height_volume_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/height_volume_input" />
+
+        <EditText
+            android:id="@+id/height_volume_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/width_volume_input" />
+
+        <Button
+            android:id="@+id/count_volume_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/count_text"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_volume_input" />
+
+        <TextView
+            android:id="@+id/result_volume_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Result"
+            android:textSize="@dimen/font_size_very_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/count_volume_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

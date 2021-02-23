@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/value_conversion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/value_text"
+            android:textSize="@dimen/font_size_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value_conversion_text" />
+
+        <TextView
+            android:id="@+id/from_conversion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="From:"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+        <TextView
+            android:id="@+id/to_conversion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:text="To:"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintBottom_toBottomOf="@+id/from_conversion_text"
+            app:layout_constraintStart_toEndOf="@+id/from_conversion_text"
+            app:layout_constraintTop_toTopOf="@+id/from_conversion_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/from_conversion_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/from_conversion_text"
+            app:layout_constraintEnd_toStartOf="@+id/to_conversion_text"
+            app:layout_constraintStart_toEndOf="@+id/from_conversion_text"
+            app:layout_constraintTop_toTopOf="@+id/from_conversion_text" />
+
+        <Spinner
+            android:id="@+id/to_conversion_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/to_conversion_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/to_conversion_text"
+            app:layout_constraintTop_toTopOf="@+id/to_conversion_text" />
+
+        <Button
+            android:id="@+id/convert_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Convert"
+            android:textSize="@dimen/font_size_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_conversion_text" />
+
+        <TextView
+            android:id="@+id/result_conversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Result"
+            android:textSize="@dimen/font_size_very_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/convert_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

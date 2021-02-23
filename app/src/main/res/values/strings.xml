@@ -7,4 +7,24 @@
     <string name="password_hint">Input your password</string>
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
+    <string name="counting_physics_text">Counting Physics</string>
+    <string name="length_conversion_text">Length Conversion</string>
+    <string name="input_values_text">Input values</string>
+    <string name="length_text">Length</string>
+    <string name="width_text">Width</string>
+    <string name="height_text">Height</string>
+    <string name="count_text">Count</string>
+    <string name="value_text">Value</string>
+    <string-array name="unit_of_length_array">
+        <item>Kilometer</item>
+        <item>Hectometer</item>
+        <item>Decameter</item>
+        <item>Meter</item>
+        <item>Desimeter</item>
+        <item>Centimeter</item>
+        <item>Milimeter</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="height_text">Height</string>
 </resources>

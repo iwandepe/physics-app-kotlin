@@ -3,4 +3,5 @@
     <dimen name="font_size_small">14sp</dimen>
     <dimen name="font_size_medium">18sp</dimen>
     <dimen name="font_size_big">28sp</dimen>
+    <dimen name="font_size_very_big">48sp</dimen>
 </resources>
