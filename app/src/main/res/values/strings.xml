@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Physics App</string>
+    <string name="question_signup">Do not have any account?</string>
+    <string name="signup_ink">Sign Up</string>
+    <string name="login_text">Login</string>
+    <string name="email_hint">Input your email</string>
+    <string name="password_hint">Input your password</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+</resources>
