@@ -19,7 +19,7 @@ class MenuFragment : Fragment() {
                 v.findNavController().navigate(R.id.action_menuFragment_to_countAreaFragment)
             }
             countingVolumeNavigation.setOnClickListener { v: View ->
-                v.findNavController().navigate(R.id.action_menuFragment_to_conversionFragment)
+                v.findNavController().navigate(R.id.action_menuFragment_to_countVolumeFragment)
             }
             lengthConversionNavigation.setOnClickListener{ v: View ->
                 v.findNavController().navigate(R.id.action_menuFragment_to_conversionFragment)

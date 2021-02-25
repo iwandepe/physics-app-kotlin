@@ -1,59 +1,88 @@
 package com.iwandepe.physicsapp
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.*
+import androidx.databinding.DataBindingUtil
+import com.iwandepe.physicsapp.databinding.FragmentConversionBinding
+import kotlin.time.milliseconds
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ConversionFragment : Fragment(){
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ConversionFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ConversionFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var unitOfLengthTo: Double = 0.0
+    private var unitOfLengthFrom: Double = 0.0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_conversion, container, false)
+        val binding:FragmentConversionBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_conversion, container, false
+        )
+        val spinnerFrom: Spinner = binding.fromConversionDropdown
+        val spinnerTo: Spinner = binding.toConversionDropdown
+        val inputConversionText: EditText = binding.inputConversionText
+        val resultConversionText: TextView = binding.resultConversion
+
+        // Create dropdown view from resource
+        ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.unit_of_length_array,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+            // Apply the adapter to the spinner
+            spinnerTo.adapter = adapter
+            spinnerFrom.adapter = adapter
+        }
+
+        binding.convertButton.setOnClickListener {
+            val input: String = inputConversionText.text.toString()
+
+            // Input validation
+            if (input.isEmpty()){
+                inputConversionText.error = "Value cannot be empty"
+            }
+            else {
+                val result: Double = input.toDouble() * Math.pow(10.0, unitOfLengthFrom) / Math.pow(10.0, unitOfLengthTo)
+                resultConversionText.text = result.toString()
+                resultConversionText.visibility = View.VISIBLE
+            }
+        }
+
+        spinnerFrom.onItemSelectedListener = SpinnerFromClass()
+        spinnerTo.onItemSelectedListener = SpinnerToClass()
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ConversionFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ConversionFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private inner class SpinnerFromClass : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            // Do nothing
+        }
+
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            unitOfLengthFrom = position.toDouble()
+//            Toast.makeText(view!!.context, position.toString(), Toast.LENGTH_SHORT).show()
+        }
     }
+
+    private inner class SpinnerToClass : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            // Do nothing
+        }
+
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            unitOfLengthTo = position.toDouble()
+        }
+    }
+
 }

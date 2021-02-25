@@ -33,12 +33,13 @@ class LoginFragment : Fragment(){
             }
 
             // Check if the email and password are correct
-            if (email.equals("iwan@gmail.com") && password.equals("iwandwiprakoso")) {
-                v.findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
-            }
-            else {
-                Toast.makeText(requireActivity(), "Email or password wrong", Toast.LENGTH_LONG).show()
-            }
+            v.findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
+//            if (email.equals("iwan@gmail.com") && password.equals("iwandwiprakoso")) {
+//                v.findNavController().navigate(R.id.action_loginFragment_to_menuFragment)
+//            }
+//            else {
+//                Toast.makeText(requireActivity(), "Email or password wrong", Toast.LENGTH_LONG).show()
+//            }
         }
         return binding.root
     }
