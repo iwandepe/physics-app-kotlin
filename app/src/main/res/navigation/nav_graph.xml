@@ -20,20 +20,28 @@
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action
-            android:id="@+id/action_menuFragment_to_countingPhysicsFragment"
-            app:destination="@id/countingPhysicsFragment" />
-        <action
             android:id="@+id/action_menuFragment_to_conversionFragment"
             app:destination="@id/conversionFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_countAreaFragment"
+            app:destination="@id/countAreaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_countVolumeFragment"
+            app:destination="@id/countVolumeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/countingPhysicsFragment"
-        android:name="com.iwandepe.physicsapp.CountingPhysicsFragment"
-        android:label="fragment_counting_physics"
-        tools:layout="@layout/fragment_counting_physics" />
     <fragment
         android:id="@+id/conversionFragment"
         android:name="com.iwandepe.physicsapp.ConversionFragment"
         android:label="fragment_conversion"
         tools:layout="@layout/fragment_conversion" />
+    <fragment
+        android:id="@+id/countAreaFragment"
+        android:name="com.iwandepe.physicsapp.CountAreaFragment"
+        android:label="fragment_count_area"
+        tools:layout="@layout/fragment_count_area" />
+    <fragment
+        android:id="@+id/countVolumeFragment"
+        android:name="com.iwandepe.physicsapp.CountVolumeFragment"
+        android:label="fragment_count_volume"
+        tools:layout="@layout/fragment_count_volume" />
 </navigation>

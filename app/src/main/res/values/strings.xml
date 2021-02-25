@@ -12,7 +12,6 @@
     <string name="input_values_text">Input values</string>
     <string name="length_text">Length</string>
     <string name="width_text">Width</string>
-    <string name="height_text">Height</string>
     <string name="count_text">Count</string>
     <string name="value_text">Value</string>
     <string-array name="unit_of_length_array">
@@ -27,4 +26,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="height_text">Height</string>
+    <string name="count_area_text">Count Area</string>
+    <string name="count_volume_text">Count Volume</string>
 </resources>
