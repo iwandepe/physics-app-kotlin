@@ -3,7 +3,7 @@
     <string name="question_signup">Do not have any account?</string>
     <string name="signup_ink">Sign Up</string>
     <string name="login_text">Login</string>
-    <string name="email_hint">Input your email</string>
+    <string name="email_hint">Input your username</string>
     <string name="password_hint">Input your password</string>
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
@@ -28,4 +28,5 @@
     <string name="height_text">Height</string>
     <string name="count_area_text">Count Area</string>
     <string name="count_volume_text">Count Volume</string>
+    <string name="username_text">Username</string>
 </resources>
